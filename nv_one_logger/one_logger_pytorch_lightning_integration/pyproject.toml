@@ -9,7 +9,8 @@ packages = [
 ]
 license = "Apache-2.0"
 
-[project.urls]
+# XR AI packaging change: retain Poetry metadata without a partial PEP 621 project.
+[tool.poetry.urls]
 Homepage = "https://github.com/NVIDIA/nv-one-logger"
 
 [tool.poetry.dependencies]
