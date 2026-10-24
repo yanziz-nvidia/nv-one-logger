@@ -271,8 +271,9 @@ class OneLoggerPTLTrainer(Trainer):
 
         super().__init__(**trainer_config)
 
+    # XR AI compatibility change: accept Lightning 2.6 checkpoint policy values.
     @override
-    def save_checkpoint(self, filepath: Union[str, Path], weights_only: bool = False, storage_options: Optional[Any] = None) -> None:
+    def save_checkpoint(self, filepath: Union[str, Path], weights_only: Optional[bool] = False, storage_options: Optional[Any] = None) -> None:
         """Save a model checkpoint and call the appropriate training telemetry callbacks.
 
         Args:
